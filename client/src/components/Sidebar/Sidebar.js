@@ -1,4 +1,4 @@
-// adapted from: https://mui.com/components/drawers/#PersistentDrawerLeft.js
+// adapted from: https://mui.com/components/drawers/#ResponsiveDrawer.js
 import React from 'react'
 import { styled, useTheme } from '@mui/material/styles';
 import Box from '@mui/material/Box';
@@ -18,6 +18,7 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import { SidebarData } from './sidebarData';
 import { Link, useLocation } from "react-router-dom";
+import Home from '../Home/Home';
 import Prices from '../Prices/Prices';
 import Info from '../Info/Info';
 import useStyles from "./styles";
@@ -107,9 +108,9 @@ export default function PersistentDrawerLeft() {
           >
             <MenuIcon />
           </IconButton>
-          <Typography variant="h5" noWrap component="div">
-            CryptoWatch
-          </Typography>
+          <Link className={classes.text} to="/">
+            <Typography className={classes.text} variant="h5">CryptoWatch</Typography>
+          </Link>
         </Toolbar>
       </AppBar>
       <Drawer
@@ -131,26 +132,27 @@ export default function PersistentDrawerLeft() {
           </IconButton>
         </DrawerHeader>
         <Divider />
-        
-        <List>
-            {SidebarData.map((item, index) => (
-              <List>
-                <ListItem button component={Link} to={item.path} key={item.title}>
-                        {/* The icon for each item in side bar */}
-                        <ListItemIcon className={classes.sideBarIcon}>{item.icon}</ListItemIcon>
-                        {/* The text for each item in side bar */}
-                        <ListItemText className={classes.sideBarText} primary={item.title} />
-                </ListItem>
-                <Divider />
-              </List>
-            ))}
-        </List>
+          
+          <List>
+              {SidebarData.map((item, index) => (
+                <div key={index}>
+                  <ListItem button component={Link} to={item.path} key={item.path}>
+                          {/* The icon for each item in side bar */}
+                          <ListItemIcon key={item.icon} className={classes.sideBarIcon}>{item.icon}</ListItemIcon>
+                          {/* The text for each item in side bar */}
+                          <ListItemText key={item.title} className={classes.sideBarText} primary={item.title} />
+                  </ListItem>
+                  <Divider />
+                </div>
+              ))}
+          </List>
       </Drawer>
 
       <Main open={open}>
         <DrawerHeader />
         {location.pathname === "/prices" ? <Prices /> : 
-        location.pathname === "/info" ? <Info /> : <h1>test</h1> }
+        location.pathname === "/info" ? <Info /> : 
+        location.pathname === "/" ? <Home /> : null }
       </Main>
     </Box>
   );

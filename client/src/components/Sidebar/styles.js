@@ -12,7 +12,10 @@ export default makeStyles((theme) => ({
     fontSize: "20px",
   },
   sideBarIcon: {
-    fill: "white",
-    fontSize: "50px",
+    fill: "red",
+  },
+  text: {
+    color: "white",
+    textDecoration: "none",
   }
 }));

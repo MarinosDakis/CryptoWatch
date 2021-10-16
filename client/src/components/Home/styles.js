@@ -1,19 +1,28 @@
 import { makeStyles } from '@material-ui/core/styles';
+import { flexbox } from '@mui/system';
 
 export default makeStyles((theme) => ({
   root: {
     '& .MuiTextField-root': {
+      display: flexbox,
       margin: theme.spacing(1),
     },
   },
-  paper: {
+  card: {
     padding: theme.spacing(2),
     margin: "20px 0",
+    width: 400,
+    borderRadius: 45,
   },
-  priceButton: {
-    marginBottom: 10,
+  url: {
+    textDecoration: "none",
+    color: "black",
   },
-  card: {
-      width: "200px",
+  img: {
+    borderRadius: "45px",
+  },
+  container: {
+    display: "flex",
+    justifyContent: "center",
   }
 }));
