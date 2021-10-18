@@ -139,9 +139,9 @@ export default function PersistentDrawerLeft() {
                 <div key={index}>
                   <ListItem button component={Link} to={item.path} key={item.path}>
                           {/* The icon for each item in side bar */}
-                          <ListItemIcon key={item.icon} style={{ color: "orange" }}>{item.icon}</ListItemIcon>
+                          <ListItemIcon key={item.icon} style={{ color: "white" }}>{item.icon}</ListItemIcon>
                           {/* The text for each item in side bar */}
-                          <ListItemText key={item.title} style={{ color: "orange" }} primary={item.title} />
+                          <ListItemText key={item.title} style={{ color: "white" }} primary={item.title} />
                   </ListItem>
                   <Divider className={classes.root} />
                 </div>

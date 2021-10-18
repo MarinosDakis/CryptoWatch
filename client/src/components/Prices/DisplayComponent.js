@@ -1,7 +1,6 @@
 import React from 'react'
 import { Typography, Grid, Card, TextField, Zoom } from '@material-ui/core';
 import Divider from '@mui/material/Divider';
-import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 //import { InputAdornment } from '@material-ui/core';
@@ -9,39 +8,30 @@ import CardMedia from '@mui/material/CardMedia';
 
 import useStyles from './styles';
 
-export default function DisplayComponent({ img, title, desc, buyPrice, sellPrice, actions, companyName }) {
+export default function DisplayComponent({ img, title, buyPrice, sellPrice, companyName }) {
 
     const classes = useStyles();
 
     return (
         <Zoom in >
                 <Grid container className={classes.container}>
-                    <Card variant="outlined" sx={{ maxWidth: 345 }} className={classes.card}>
-                        <Typography variant="h4" align="center">{companyName}</Typography>
-                        <CardMedia 
-                            className={classes.img}
-                            component="img"
-                            height="auto"
-                            image={img}
-                            alt="crypto-image"
-                        />
+                    <Card variant="outlined" className={classes.card}>
+                        <Typography className={classes.root} variant="h4" gutterBottom align="center">{companyName}</Typography>
+                        <CardMedia className={classes.img} component="img" height="auto" image={img} alt="crypto-image"></CardMedia>
+                        <Typography className={classes.root} variant="h4" gutterBottom  align="center">{title}</Typography>
                         <Divider className={classes.root} />
                         <CardContent>
-                            <Typography className={classes.root} gutterBottom variant="h3" align="center">{title}</Typography>
                             <Grid container spacing={2}>
-                            <Grid item xs align="center">
-                                    <Typography className={classes.textField} gutterBottom variant="h4" align="center">BUY</Typography>
-                                    <TextField className={classes.root} readOnly variant="outlined" value={buyPrice}></TextField>  
+                                <Grid item align="center">
+                                    <Typography className={classes.textField} gutterBottom variant="h5" align="center"><strong>BUY</strong></Typography>
+                                    <TextField  InputProps={{ className:classes.input}} className={classes.root} readOnly variant="outlined" value={buyPrice ? buyPrice : "Error"}></TextField>  
                                 </Grid>
-                                <Grid item xs align="center">
-                                    <Typography className={classes.textField} gutterBottom variant="h4" align="center">SELL</Typography>
-                                    <TextField className={classes.root} readOnly variant="outlined" value={sellPrice}></TextField>  
+                                <Grid item align="center">
+                                    <Typography className={classes.textField} gutterBottom variant="h5" align="center"><strong>SELL</strong></Typography>
+                                    <TextField InputProps={{ className:classes.input}} readOnly variant="outlined" value={sellPrice ? sellPrice : "Error"}></TextField>  
                                 </Grid>
                             </Grid>
                         </CardContent>
-                        <CardActions display="flex">
-                            {actions}
-                        </CardActions>
                     </Card>
                 </Grid>
             </Zoom >

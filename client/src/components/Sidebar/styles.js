@@ -2,9 +2,8 @@ import { makeStyles } from '@material-ui/core/styles';
 
 export default makeStyles((theme) => ({
   root: {
-    '& .MuiTextField-root': {
-      margin: theme.spacing(1),
-      fontSize: "2rem",
+    '&.MuiTypography-root': {
+      color: "white",
     },
     '&.MuiDivider-root': {
       borderColor: "white",
