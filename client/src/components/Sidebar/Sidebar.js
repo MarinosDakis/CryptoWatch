@@ -117,9 +117,10 @@ export default function PersistentDrawerLeft() {
         sx={{
           width: drawerWidth,
           flexShrink: 0,
-          '& .MuiDrawer-paper': {
+          '& .MuiDrawer-paper': { // used to edit the draw options
             width: drawerWidth,
             boxSizing: 'border-box',
+            backgroundColor: "black",
           },
         }}
         variant="persistent"
@@ -128,21 +129,21 @@ export default function PersistentDrawerLeft() {
       >
         <DrawerHeader>
           <IconButton onClick={handleDrawerClose}>
-            {theme.direction === 'ltr' ? <ChevronLeftIcon /> : <ChevronRightIcon />}
+            {theme.direction === 'ltr' ? <ChevronLeftIcon style={{ color: "white" }}  /> : <ChevronRightIcon />}
           </IconButton>
         </DrawerHeader>
-        <Divider />
+        <Divider style={{ borderColor: "white" }} />
           
           <List>
               {SidebarData.map((item, index) => (
                 <div key={index}>
                   <ListItem button component={Link} to={item.path} key={item.path}>
                           {/* The icon for each item in side bar */}
-                          <ListItemIcon key={item.icon} className={classes.sideBarIcon}>{item.icon}</ListItemIcon>
+                          <ListItemIcon key={item.icon} style={{ color: "orange" }}>{item.icon}</ListItemIcon>
                           {/* The text for each item in side bar */}
-                          <ListItemText key={item.title} className={classes.sideBarText} primary={item.title} />
+                          <ListItemText key={item.title} style={{ color: "orange" }} primary={item.title} />
                   </ListItem>
-                  <Divider />
+                  <Divider style={{ borderColor: "white" }} />
                 </div>
               ))}
           </List>
