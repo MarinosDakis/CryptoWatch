@@ -9,7 +9,7 @@ import CardMedia from '@mui/material/CardMedia';
 
 import useStyles from './styles';
 
-export default function DisplayComponent({ img, title, desc, buyPrice, sellPrice, actions }) {
+export default function DisplayComponent({ img, title, desc, buyPrice, sellPrice, actions, companyName }) {
 
     const classes = useStyles();
 
@@ -17,6 +17,7 @@ export default function DisplayComponent({ img, title, desc, buyPrice, sellPrice
         <Zoom in >
                 <Grid container className={classes.container}>
                     <Card variant="outlined" sx={{ maxWidth: 345 }} className={classes.card}>
+                        <Typography variant="h4" align="center">{companyName}</Typography>
                         <CardMedia 
                             className={classes.img}
                             component="img"
@@ -30,11 +31,11 @@ export default function DisplayComponent({ img, title, desc, buyPrice, sellPrice
                             <Grid container spacing={2}>
                             <Grid item xs align="center">
                                     <Typography className={classes.textField} gutterBottom variant="h4" align="center">BUY</Typography>
-                                    <TextField className={classes.root} readOnly variant="filled" value={buyPrice}></TextField>  
+                                    <TextField className={classes.root} readOnly variant="outlined" value={buyPrice}></TextField>  
                                 </Grid>
                                 <Grid item xs align="center">
                                     <Typography className={classes.textField} gutterBottom variant="h4" align="center">SELL</Typography>
-                                    <TextField className={classes.root} readOnly variant="filled" value={sellPrice} style={{ color: "red" }}></TextField>  
+                                    <TextField className={classes.root} readOnly variant="outlined" value={sellPrice}></TextField>  
                                 </Grid>
                             </Grid>
                         </CardContent>

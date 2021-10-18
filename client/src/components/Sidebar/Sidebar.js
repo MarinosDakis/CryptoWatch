@@ -129,10 +129,10 @@ export default function PersistentDrawerLeft() {
       >
         <DrawerHeader>
           <IconButton onClick={handleDrawerClose}>
-            {theme.direction === 'ltr' ? <ChevronLeftIcon style={{ color: "white" }}  /> : <ChevronRightIcon />}
+            {theme.direction === 'ltr' ? <ChevronLeftIcon className={classes.root}  /> : <ChevronRightIcon />}
           </IconButton>
         </DrawerHeader>
-        <Divider style={{ borderColor: "white" }} />
+        <Divider className={classes.root} />
           
           <List>
               {SidebarData.map((item, index) => (
@@ -143,7 +143,7 @@ export default function PersistentDrawerLeft() {
                           {/* The text for each item in side bar */}
                           <ListItemText key={item.title} style={{ color: "orange" }} primary={item.title} />
                   </ListItem>
-                  <Divider style={{ borderColor: "white" }} />
+                  <Divider className={classes.root} />
                 </div>
               ))}
           </List>

@@ -6,9 +6,12 @@ export default makeStyles((theme) => ({
       margin: theme.spacing(1),
       fontSize: "2rem",
     },
-    '& .MuiDivider-root': {
+    '&.MuiDivider-root': {
       borderColor: "white",
-    }
+    },
+    '&.MuiSvgIcon-root': {
+      color: "white",
+    },
   },
   sideBarText: {
     color: "orange",
