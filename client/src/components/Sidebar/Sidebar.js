@@ -21,6 +21,7 @@ import { Link, useLocation } from "react-router-dom";
 import Home from '../Home/Home';
 import Prices from '../Prices/Prices';
 import Info from '../Info/Info';
+import Exchanges from '../Exchanges/Exchanges';
 import useStyles from "./styles";
 
 // for the drawer
@@ -153,6 +154,7 @@ export default function PersistentDrawerLeft() {
         <DrawerHeader />
         {location.pathname === "/prices" ? <Prices /> : 
         location.pathname === "/info" ? <Info /> : 
+        location.pathname === "/exchanges" ? <Exchanges /> :
         location.pathname === "/" ? <Home /> : null }
       </Main>
     </Box>
