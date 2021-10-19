@@ -13,21 +13,6 @@ export default function Home() {
 
     const classes = useStyles();
     
-    /*
-    const filler = ["Crypto Watch is a web application created using Javascript (React JS, Node Js) and Material UI.",
-                    "Current Features: Current Bitcoin and Ethereum prices for different currencies and information display for different platforms."]
-
-
-                <Container item xs={12} sm={7}>
-                    {filler.map((item, index) => (
-                        <Paper elevation={3} className={classes.paper}>
-                        <Typography key={index} variant="h5" align="center">{item}</Typography>
-                        </Paper>
-                    ))}
-                </Container>
-
-    */
-
     return (
             <Zoom in>
                 <Grid container className={classes.container}>

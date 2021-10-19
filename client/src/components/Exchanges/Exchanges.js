@@ -1,9 +1,11 @@
-import React from 'react'
+import { Container } from '@material-ui/core';
+import React from 'react';
+import ExchangeDisplay from './ExchangeDisplay';
 
 export default function Exchanges() {
     return (
-        <div>
-            <h1>Exchanges</h1>
-        </div>
+        <Container>
+             <ExchangeDisplay /> 
+        </Container>
     )
 }
