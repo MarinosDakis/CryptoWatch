@@ -5,7 +5,7 @@ import ExchangeDisplay from './ExchangeDisplay';
 export default function Exchanges() {
     return (
         <Container>
-             <ExchangeDisplay /> 
+            <ExchangeDisplay />
         </Container>
     )
 }

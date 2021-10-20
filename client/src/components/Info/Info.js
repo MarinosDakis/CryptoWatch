@@ -19,7 +19,7 @@ export default function Info() {
         <Zoom in>
             <Card sx={{ maxWidth: 345 }} className={classes.card}>
                 <Typography className={classes.textField} variant="h4" align="center" gutterBottom><strong>Choosing an exchange</strong></Typography>
-                <Divider className={classes.root}/>
+                <Divider className={classes.root} />
                 <InfoListComponent />
             </Card>
         </Zoom>

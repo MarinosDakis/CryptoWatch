@@ -8,7 +8,7 @@ export default makeStyles((theme) => ({
     width: 400,
     borderRadius: 45,
     border: "#7e7878 solid 1px",
-    boxShadow: "0 4px 5px 5px rgba(0, 0, 0, .2)", 
+    boxShadow: "0 4px 5px 5px rgba(0, 0, 0, .2)",
   },
   url: {
     textDecoration: "none",

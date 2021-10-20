@@ -12,39 +12,39 @@ import background from "../../images/background.jpg";
 export default function Home() {
 
     const classes = useStyles();
-    
+
     return (
-            <Zoom in>
-                <Grid container className={classes.container}>
-                    <Card sx={{ maxWidth: 345 }} className={classes.card}>
-                    <Typography  gutterBottom variant="h6" align="center">Created by Marinos Dakis</Typography>
-                        <CardMedia className={classes.img} component="img" height="auto" image={background} alt="crypto-image" />
-                        <CardContent>
-                            <Typography gutterBottom variant="h5" component="div">
+        <Zoom in>
+            <Grid container className={classes.container}>
+                <Card sx={{ maxWidth: 345 }} className={classes.card}>
+                    <Typography gutterBottom variant="h6" align="center">Created by Marinos Dakis</Typography>
+                    <CardMedia className={classes.img} component="img" height="auto" image={background} alt="crypto-image" />
+                    <CardContent>
+                        <Typography gutterBottom variant="h5" component="div">
                             Crypto Watch is a web application created using Javascript (React JS, Node Js) and Material UI.
-                            </Typography>
-                            <Typography variant="body2">
+                        </Typography>
+                        <Typography variant="body2">
                             <strong>Current Features:</strong> Displays updated Bitcoin & Ethereum prices and information kiosk on different crypto exchanges to use.
-                            </Typography>
-                        </CardContent>
-                        <CardActions display="flex">
-                            <Grid container spacing={2}>
-                                <Grid item xs align="center">
-                                    <a className={classes.url} href="https://github.com/MarinosDakis" target="_blank" rel="noreferrer">
-                                        <GitHubIcon /> 
-                                        <Typography textDecoration="none">GitHub</Typography>
-                                    </a>
-                                </Grid>
-                                <Grid item xs align="center">
-                                    <a className={classes.url} href="https://marinosdakis.com/" target="_blank" rel="noreferrer">
-                                        <AccountBoxIcon />
-                                        <Typography>Portfolio site</Typography>
-                                    </a>
-                                </Grid>
+                        </Typography>
+                    </CardContent>
+                    <CardActions display="flex">
+                        <Grid container spacing={2}>
+                            <Grid item xs align="center">
+                                <a className={classes.url} href="https://github.com/MarinosDakis" target="_blank" rel="noreferrer">
+                                    <GitHubIcon />
+                                    <Typography textDecoration="none">GitHub</Typography>
+                                </a>
                             </Grid>
-                        </CardActions>
-                    </Card>
-                </Grid>
-            </Zoom>
+                            <Grid item xs align="center">
+                                <a className={classes.url} href="https://marinosdakis.com/" target="_blank" rel="noreferrer">
+                                    <AccountBoxIcon />
+                                    <Typography>Portfolio site</Typography>
+                                </a>
+                            </Grid>
+                        </Grid>
+                    </CardActions>
+                </Card>
+            </Grid>
+        </Zoom>
     )
 }
