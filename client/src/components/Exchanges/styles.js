@@ -3,13 +3,14 @@ import { makeStyles } from '@material-ui/core/styles';
 export default makeStyles((theme) => ({
 
 root: {
-    '&.MuiCardMedia-root': {
-        objectFit: "scale-down",
-    },
-    '&.MuiDivider-root': {
-        borderColor: "#857687",
-        borderWidth: "1.5px",
-      },
+  '&.MuiCardMedia-root': {
+    objectFit: "scale-down",
+  },
+  '&.MuiDivider-root': {
+    borderColor: "#d1d1d1",
+    borderWidth: "0.1px",
+    margin: "10px 0",
+  },
 },
   card: {
     backgroundColor: "white",
