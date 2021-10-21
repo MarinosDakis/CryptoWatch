@@ -22,7 +22,6 @@ export default function DisplayComponent() {
 
     return (
         <div>
-            <Button className={classes.button} variant="contained" onClick={getPrices}><strong>Update Prices</strong></Button>
             <Zoom in >
                 <Grid container spacing={2} className={classes.container}>
                     {priceList.map((item, index) => (

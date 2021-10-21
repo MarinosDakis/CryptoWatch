@@ -3,7 +3,7 @@ import bodyParser from "body-parser";
 import cors from "cors";
 import dotenv from "dotenv";
 
-// import postRoutes from "./routes/posts.js";
+import cryptoRoutes from "./routes/cryptoRoutes.js";
 
 const app = express();
 dotenv.config();
@@ -12,11 +12,11 @@ app.use(bodyParser.json({limit: "30mb", extended: true}));
 app.use(bodyParser.urlencoded({limit: "30mb", extended: true}));
 app.use(cors());
 
-// every route inside postRoutes will start with /posts
-//app.use("/posts", postRoutes);
+// every route inside cryptoRoutes will start with /prices
+app.use("/prices", cryptoRoutes);
 
 app.get("/", (req, res) => {
-    res.send("Welcome to Cryptowatch api");
+    res.send("Welcome to CryptoWatch API")
 });
 
 // setting up port
