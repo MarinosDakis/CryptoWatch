@@ -12,12 +12,12 @@ import { infoList } from './infoList';
 
 export default function InfoListComponent() {
   return (
-    <List sx={{ width: '100%' }}>
+    <List sx={{ maxWidth: 600 }}>
       <Grid container>
         { /* Adapted from: https://stackoverflow.com/questions/38176352/javascript-map-array-last-item#:~:text=Fewer%20lines%20of%20code%20can%20achieve%20the%20same%20results */}
         {infoList.map((item, index, { length }) => (
           <Container key={index}>
-            <Grid item>
+            <Grid item xs={12} sm={12}>
               <ListItem>
                 <ListItemAvatar><Avatar sx={{ bgcolor: "black" }}>{item.icon}</Avatar></ListItemAvatar>
                 <ListItemText primary={item.consider} secondary={item.desc} />
