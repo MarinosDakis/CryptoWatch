@@ -8,11 +8,11 @@ ___
 
 [1] Clone repository or download files.
 
-[2] Open file in code editor and make sure you are in the correct path that contains client and server folder.
+[2] Open folder in code editor and make sure you are in the correct path that contains client and server folder.
 
 [3] Split two terminals and then in each respected terminal type: "cd client", "cd server".
 
-[4] If you don't have the node modules folder, type "npm install" in each terminal. Then, type "npm start" in each terminal to load front end and backend.
+[4] If you don't have the node modules folder, type "npm install" in each terminal. Then, type "npm start" in each terminal to load front-end and back-end.
 
 [5] If successful [http://localhost:3000](http://localhost:3000) will load the client-side, and server terminal will say that it is running on localhost:5000 in the console.
 
@@ -21,11 +21,11 @@ ___
 
 ***Are there any sub-optimal choices( or short cuts taken due to limited time ) in your implementation?***
 
-Yes. Firstly, some short cuts taken include adapting pre-existing code examples from the Material-UI website and using it to show different features in my web application; for instance, I adapted their drawer and accordian examples heavily into my web application. I find in certain situations it's better to see if there's already pre-existing libraries that can be used in a project -- not only does this save time, in some cases these libraries have been tested beforehand so it saves a lot of potential troubleshooting if I were to hardcode it myself.
+Yes. Firstly, some short cuts taken include adapting pre-existing code examples from the Material-UI website and using it to show different features in my web application; for instance, I adapted their drawer and accordian examples heavily into my web application. I find in certain situations it's better to see if there's already pre-existing libraries that can be used in a project -- not only does this save time, in some cases these libraries have been thoroughly tested beforehand so it saves a lot of potential troubleshooting errors if I were to hardcode it myself.
 
 Secondly, the information used to recommend one exchange from another was taken from multiple online resources and incorporated into the web application. The reason for this is because these online sources have a better understanding of exchanges than I do, so it's better to let users of the application read valid information from better credible sources.
 
-Thirdly, some parts of my code could have been designed better. I found that there were some instances of repeating code, or logic seeming too complicated when there's bound to be more effective solutions out there. The cause of this being my limited time outside of working on this project, and a lack of knowledge in how to improve the quality of my code (which is something I'd love to improve upon).
+Thirdly, some parts of my code could have been designed better. I found that there were some instances of code repetition, or logic seeming too complicated when there's bound to be more effective solutions out there. The cause of this being my limited time to work on this project and a lack of knowledge in how to improve the quality of my code (which is something I'd love to improve upon).
 
 ***Is any part of it over-designed? ( It is fine to over-design to showcase your skills as long as you are clear about it)***
 
