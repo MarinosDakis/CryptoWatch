@@ -16,7 +16,7 @@ export default makeStyles((theme) => ({
     backgroundColor: "white",
     padding: theme.spacing(3),
     margin: "20px 0",
-    width: 500,
+    width: 450,
     height: "auto",
     borderRadius: 15,
     border: "#7e7878 solid 1px",

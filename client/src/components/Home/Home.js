@@ -21,7 +21,7 @@ export default function Home() {
                     <CardMedia className={classes.img} component="img" height="auto" image={background} alt="crypto-image" />
                     <CardContent>
                         <Typography gutterBottom variant="h5" component="div">
-                            Crypto Watch is a web application created using Javascript (React JS, Redux, Node Js) and Material UI.
+                            Crypto Watch is a full-stack web application created using Javascript (React JS, Redux, Node Js) and Material UI.
                         </Typography>
                         <Typography variant="body2">
                             <strong>Current Features:</strong> Displays Bitcoin & Ethereum price data from REST APIs every 5 seconds. Contains recommendations and information page describing the benefits and drawbacks of different cryptocurrency trading platforms. Mobile responsive. 
