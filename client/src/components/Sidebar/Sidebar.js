@@ -88,8 +88,6 @@ export default function PersistentDrawerLeft() {
     setOpen(false);
   };
 
-  // end of for the drawer
-
   // constants
   const location = useLocation();
   const classes = useStyles();
@@ -160,3 +158,4 @@ export default function PersistentDrawerLeft() {
     </Box>
   );
 }
+  // end adaptation for the drawer

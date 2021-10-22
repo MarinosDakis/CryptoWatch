@@ -9,7 +9,7 @@ export const exchangeList = [
         fee: "varies",
         logo: "/assets/logos/coinbase-logo.png",
         url: "https://www.coinbase.com/",
-        benefits: ["Beginner-friendly interface and easy purchase process.", "Strong user reviews and security ratings., Its educational Learn platform rewards users with cryptocurrency when they learn about crypto."],
+        benefits: ["Beginner-friendly interface.", "Easy purchase process.", "Strong user reviews and security ratings.", "Educational elements rewards users with cryptocurrency when they learn about crypto."],
         drawbacks: ["High fees for convenience.", "Must use a separate more complex platform to access lower pricing structure."],
     },
     {
@@ -19,7 +19,7 @@ export const exchangeList = [
         fee: "0.16%/0.26%",
         logo: "/assets/logos/kraken-logo.png",
         url: "https://www.kraken.com/en-us/",
-        benefits: ["Sophisticated trading features, like margin, may appeal to advanced users.", "High cybersecurity ratings."],
+        benefits: ["Sophisticated trading features (e.g. margin), that might appeal to advanced users.", "High cybersecurity ratings."],
         drawbacks: ["May be too complex for true beginner users."],
     },
     {
@@ -29,8 +29,8 @@ export const exchangeList = [
         fee: "0.1%/0.1%",
         logo: "/assets/logos/binance-logo.png",
         url: "https://www.binance.us/en/home",
-        benefits: ["Volume and exchange-token discount, which can make already-low fees almost negligible.", "More than 50 coins currently available for trading.", "Basic order types as well as OTC trading enabled."],
-        drawbacks: ["Coin offerings are limited compared to Binance and even other major exchanges, which may offer four to seven times as many coins.", "No support for margin trading."],
+        benefits: ["Volume and exchange-token discount, which can make already-low fees almost negligible.", "50+ cryptocurrencies currently available for trading.", "Basic order types as well as OTC trading enabled."],
+        drawbacks: ["Coin offerings are limited compared to Binance and even other major exchanges.", "No support for margin trading."],
     },
     {
         name: "Crypto.com",
@@ -39,7 +39,7 @@ export const exchangeList = [
         fee: "0.40%/0.40%",
         logo: "/assets/logos/crypto-com-logo.png",
         url: "https://crypto.com/",
-        benefits: ["Those with high balances in Crypto.com’s proprietary stablecoin (CRO) can reap discounts on trading fees and enhanced benefits, like 8% back on debit card spending.", "Limited margin trading currently available.", "High cybersecurity ratings."],
+        benefits: ["Those with high balances in Crypto.com’s proprietary stablecoin (CRO) can reap discounts on trading fees and enhanced benefits.", "Limited margin trading currently available.", "High cybersecurity ratings."],
         drawbacks: ["Higher trading fees for low-volume crypto investors."],
     },
     {
@@ -100,6 +100,6 @@ export const exchangeList = [
         logo: "/assets/logos/bitflyer-logo.png",
         url: "https://bitflyer.com/en-us/",
         benefits: ["Industry-low fees."],
-        drawbacks: ["May be too complex for beginners and lacks thorough educational resources.", "Very few cryptocurrencies are available to trade.", "Low cyber-security ranking"],
+        drawbacks: ["May be too complex for beginners and lacks detailed educational resources.", "Very few cryptocurrencies are available to trade.", "Low cyber-security ranking"],
     },
 ]

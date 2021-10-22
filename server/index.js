@@ -16,7 +16,7 @@ app.use(cors());
 app.use("/prices", cryptoRoutes);
 
 app.get("/", (req, res) => {
-    res.send("Welcome to CryptoWatch API")
+    res.send("Welcome to CryptoWatch API. Go to /prices to see the api responses results.")
 });
 
 // setting up port
