@@ -14,14 +14,14 @@ ___
 
 [4] Type "npm start" in each terminal to load front end and backend.
 
-[5] If successfull [http://localhost:3000](http://localhost:3000) will load the client-side, and server terminal will say that it is running on localhost:5000 in the console.
+[5] If successful [http://localhost:3000](http://localhost:3000) will load the client-side, and server terminal will say that it is running on localhost:5000 in the console.
 
 ___
 ### Questionnaire responses:
 
 ***Are there any sub-optimal choices( or short cuts taken due to limited time ) in your implementation?***
 
-Yes. Firstly, some short cuts taken include adapting pre-existing code examples from the Material-UI website and using it to show different features in my web application; for instance, I adapted their drawer and accordian examples heavily into my web application. I find in certain situations it's better to see if there's already pre-existing libraries that can be used in a project-- not only does this save time, in some cases these libraries have been tested beforehand so it saves a lot of potential troubleshooting.
+Yes. Firstly, some short cuts taken include adapting pre-existing code examples from the Material-UI website and using it to show different features in my web application; for instance, I adapted their drawer and accordian examples heavily into my web application. I find in certain situations it's better to see if there's already pre-existing libraries that can be used in a project -- not only does this save time, in some cases these libraries have been tested beforehand so it saves a lot of potential troubleshooting if I were to hardcode it myself.
 
 Secondly, the information used to recommend one exchange from another was taken from multiple online resources and incorporated into the web application. The reason for this is because these online sources have a better understanding of exchanges than I do, so it's better to let users of the application read valid information from better credible sources.
 
@@ -37,7 +37,7 @@ I'm not too sure if there's any changes I would have to make. The only thing I c
 
 ***What are some other enhancements you would have made, if you had more time to do this implementation***
 
-I would have spent more time on the logic of the application to make it more easily scalable to add more APIs. Also, I would have made the mobile responsiveness better for a range of devices.
+I would have spent more time on the logic of the application to make it more easily scalable to add more API call to other exchanges. Also, I would have made the mobile responsiveness better for a range of devices.
 
 ___
 ***Live version:***
