@@ -14,7 +14,7 @@ ___
 
 [4] Type "npm start" in each terminal to load front end and backend.
 
-[5] If successfull localhost:3000 will load the client-side, and server terminal will say that it is running on localhost:5000 in the console.
+[5] If successfull [http://localhost:3000](http://localhost:3000) will load the client-side, and server terminal will say that it is running on localhost:5000 in the console.
 
 ___
 ### Questionnaire responses:
@@ -41,6 +41,7 @@ I would have spent more time on the logic of the application to make it more eas
 
 ___
 ***Live version:***
+
 Font-end: https://practical-swanson-6b1a90.netlify.app/
 
 Back-end: https://cryptowatch-deploy.herokuapp.com/
