@@ -16,8 +16,8 @@ export default function DisplayComponent() {
     const classes = useStyles();
     const dispatch = useDispatch();
 
-    const [buyPrices, setBuyPrices] = useState({ krakenBTC: "", krakenETH: "", coinBaseBTC: "", coinBaseETH: "" })
-    const [sellPrices, setSellPrices] = useState({ krakenBTC: "", krakenETH: "", coinBaseBTC: "", coinBaseETH: "" })
+    const [buyPrices, setBuyPrices] = useState({ krakenBTC: "", krakenETH: "", coinBaseBTC: "", coinBaseETH: "", maxETH: "", maxBTC: "" })
+    const [sellPrices, setSellPrices] = useState({ krakenBTC: "", krakenETH: "", coinBaseBTC: "", coinBaseETH: "", minETH: "", minBTC: ""  })
 
     useEffect(() => { 
 
@@ -25,23 +25,28 @@ export default function DisplayComponent() {
 
             dispatch(fetchPrices()).then(prices => {
 
+                console.log(prices);
+
                 // clean up to prevent memory leak
                 // adapted from: https://stackoverflow.com/questions/54954385/react-useeffect-causing-cant-perform-a-react-state-update-on-an-unmounted-comp
-                setBuyPrices({ krakenBTC: "", krakenETH: "", coinBaseBTC: "", coinBaseETH: "" });
-                setSellPrices({ krakenBTC: "", krakenETH: "", coinBaseBTC: "", coinBaseETH: "" });
+                setBuyPrices({ krakenBTC: "", krakenETH: "", coinBaseBTC: "", coinBaseETH: "", maxETH: "", maxBTC: "" });
+                setSellPrices({ krakenBTC: "", krakenETH: "", coinBaseBTC: "", coinBaseETH: "", minETH: "", minBTC: "" });
 
+                // set buy prices
                 setBuyPrices({krakenBTC: "$" + prices.kraken_BTC_BUY,
                              krakenETH: "$" + prices.kraken_ETH_BUY,
                              coinBaseBTC: "$" + prices.coinBase_BTC_BUY,
                              coinBaseETH: "$" + prices.coinBase_ETH_BUY,
                             });
 
+                // set sell prices
                 setSellPrices({krakenBTC: "$" + prices.kraken_BTC_SELL,
                     krakenETH: "$" + prices.kraken_ETH_SELL,
                     coinBaseBTC: "$" + prices.coinBase_BTC_SELL,
                     coinBaseETH: "$" + prices.coinBase_ETH_SELL,
                    });
 
+                
             }).catch((err) => {
                 console.log(err);
             })
