@@ -12,7 +12,7 @@ ___
 
 [3] Split two terminals and then in each respected terminal type: "cd client", "cd server".
 
-[4] If you don't have the node modules folder, type "npm istall" in each terminal. Then, type "npm start" in each terminal to load front end and backend.
+[4] If you don't have the node modules folder, type "npm install" in each terminal. Then, type "npm start" in each terminal to load front end and backend.
 
 [5] If successful [http://localhost:3000](http://localhost:3000) will load the client-side, and server terminal will say that it is running on localhost:5000 in the console.
 
