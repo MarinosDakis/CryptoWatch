@@ -37,7 +37,7 @@ I'm not too sure if there's any changes I would have to make. The only thing I c
 
 ***What are some other enhancements you would have made, if you had more time to do this implementation***
 
-I would have spent more time on the logic of the application to make it more easily scalable to add more API call to other exchanges. Also, I would have made the mobile responsiveness better for a range of devices.
+I would have spent more time on the logic of the application to make it more easily scalable to add more API call to other exchanges. Also, I would have made the mobile responsiveness better for a range of devices. In addtion, I would have implemented better error handling and ARIA capabilities.
 
 ___
 ***Live version:***
