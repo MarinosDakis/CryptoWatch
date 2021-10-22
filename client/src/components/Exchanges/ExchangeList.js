@@ -3,16 +3,6 @@
 
 export const exchangeList = [
     {
-        name: "Binance.US",
-        rating: 4.9,
-        cryptoAmount: "50+",
-        fee: "0.1%/0.1%",
-        logo: "/assets/logos/binance-logo.png",
-        url: "https://www.binance.us/en/home",
-        benefits: ["Volume and exchange-token discount, which can make already-low fees almost negligible.", "More than 50 coins currently available for trading.", "Basic order types as well as OTC trading enabled."],
-        drawbacks: ["Coin offerings are limited compared to Binance and even other major exchanges, which may offer four to seven times as many coins.", "No support for margin trading."],
-    },
-    {
         name: "Coinbase",
         rating: 4.5,
         cryptoAmount: "50+",
@@ -31,6 +21,16 @@ export const exchangeList = [
         url: "https://www.kraken.com/en-us/",
         benefits: ["Sophisticated trading features, like margin, may appeal to advanced users.", "High cybersecurity ratings."],
         drawbacks: ["May be too complex for true beginner users."],
+    },
+    {
+        name: "Binance.US",
+        rating: 4.9,
+        cryptoAmount: "50+",
+        fee: "0.1%/0.1%",
+        logo: "/assets/logos/binance-logo.png",
+        url: "https://www.binance.us/en/home",
+        benefits: ["Volume and exchange-token discount, which can make already-low fees almost negligible.", "More than 50 coins currently available for trading.", "Basic order types as well as OTC trading enabled."],
+        drawbacks: ["Coin offerings are limited compared to Binance and even other major exchanges, which may offer four to seven times as many coins.", "No support for margin trading."],
     },
     {
         name: "Crypto.com",

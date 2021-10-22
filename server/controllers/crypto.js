@@ -1,25 +1,34 @@
+import axios from 'axios';
+
+export const GetPrices = async (req, res) => {
+
+         axios.all([
+
+            // coinbase [https://api.coinbase.com/v2/prices/{cryptoSymbol}-{currencyCode}/buy or sell]
+            axios.get("https://api.coinbase.com/v2/prices/BTC-USD/buy"),
+            axios.get("https://api.coinbase.com/v2/prices/BTC-USD/sell"),
+            axios.get("https://api.coinbase.com/v2/prices/ETH-USD/buy"),
+            axios.get("https://api.coinbase.com/v2/prices/ETH-USD/sell"),
+
+            // Kraken [https://api.kraken.com/0/public/Ticker?pair={currency pair}]
+            axios.get("https://api.kraken.com/0/public/Ticker?pair=BTCUSD"),
+            axios.get("https://api.kraken.com/0/public/Ticker?pair=ETHUSD"),
 
 
-export const COINBASE_API = async (req, res) => {
+        ]).then(axios.spread((obj1, obj2, obj3, obj4, obj5, obj6) => {
 
-    try {
+            res.status(200).json({ 
+                  coinBase_BTC_BUY: obj1.data.data.amount,
+                  coinBase_BTC_SELL: obj2.data.data.amount,
+                  coinBase_ETH_BUY: obj3.data.data.amount,
+                  coinBase_ETH_SELL: obj4.data.data.amount, 
+                  kraken_BTC_BUY: obj5.data.result.XXBTZUSD.a[0],
+                  kraken_BTC_SELL: obj5.data.result.XXBTZUSD.b[0],
+                  kraken_ETH_BUY: obj6.data.result.XETHZUSD.a[0],
+                  kraken_ETH_SELL: obj6.data.result.XETHZUSD.b[0],
+            });
 
-        // get api call from coinbase and then return it.
-        res.status(200).json({ result: "price" });
-
-    } catch (error) {
-        res.status(500).json({ message: "Error in coinbase api call" });
+        })).catch((err) => {
+            console.log(err);
+        })
     }
-}
-
-export const BINANCE_API = async (req, res) => {
-
-    try {
-
-        // get api call from Binance and then return it.
-        res.status(200).json({ result: "price" });
-
-    } catch (error) {
-        res.status(500).json({ message: "Error in Binance api call" });
-    }
-}
